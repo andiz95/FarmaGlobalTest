@@ -1,0 +1,16 @@
++Login: localhost:8080/authenticate
+ username: admin
+ password: admin
++GetBarang : localhost:8080/api/v1/barang
++GetDetailBarang: localhost:8080/api/v1/barang/{id}
++PostBarang : localhost:8080/api/v1/barang
++PutBarang : localhost:8080/api/v1/barang/{id}
++DeleteBarang : localhost:8080/api/v1/barang/{id}
+
++GetPenjualan(10/10/2020-11/11/2020+paging): localhost:8080/api/v1/penjualan
++PostPenjualan : localhost:8080/api/v1/penjualan
++PutPenjualan : localhost:8080/api/v1/penjualan/{id}
++DeletePenjualan: localhost:8080/api/v1/penjualan/{id}
+
++GetJumlahDetailPenjualan : localhost:8080/api/v1/detail/jumlah
++GetTotalDetailPenjualan  : localhost:8080/api/v1/detail/total
