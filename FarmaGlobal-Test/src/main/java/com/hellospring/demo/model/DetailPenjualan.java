@@ -22,6 +22,11 @@ public class DetailPenjualan {
 //    @OneToOne(mappedBy = "detailPenjualan")
 //    private Penjualan penjualan;
 
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "barang_id",referencedColumnName = "id_barang")
+    private Barang barang;
+
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "penjualan_id",referencedColumnName = "id_penjualan")
     private Penjualan penjualan;

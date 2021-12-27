@@ -31,7 +31,7 @@ public class PutPenjualan {
                 .orElseThrow(() -> new ResourceNotFoundException("Barang tidak ditemukan"));
 
         Penjualan penjualan = modelMapperUtil.modelMapperUtil().map(editPenjualan, Penjualan.class);
-        penjualan.setBarang(barang);
+//        penjualan.setBarang(barang);
         penjualan.setBanyak_barang(editPenjualan.getBanyak_barang());
         penjualan.setTanggal_penjualan(editPenjualan.getTanggal_penjualan());
         penjualan.setNama_pembeli(editPenjualan.getNama_pembeli());
@@ -39,7 +39,7 @@ public class PutPenjualan {
         penjualan.setJumlah_uang_pembeli(editPenjualan.getJumlah_uang_pembeli());
         penjualan.setHarga_barang(editPenjualan.getHarga_barang());
 
-        penjualan1.setBarang(penjualan.getBarang());
+//        penjualan1.setBarang(penjualan.getBarang());
         penjualan1.setBanyak_barang(penjualan.getBanyak_barang());
         penjualan1.setTanggal_penjualan(penjualan.getTanggal_penjualan());
         penjualan1.setNama_pembeli(penjualan.getNama_pembeli());

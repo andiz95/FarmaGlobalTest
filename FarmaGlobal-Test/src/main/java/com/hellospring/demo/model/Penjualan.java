@@ -32,17 +32,22 @@ public class Penjualan {
     @Column(name = "harga_barang")
     private int harga_barang;
 
-    @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "barang_id",referencedColumnName = "id_barang")
-    private Barang barang;
+//    @JsonIgnore
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "barang_id",referencedColumnName = "id_barang")
+//    private Barang barang;
 
 //    @OneToMany(mappedBy = "penjualan")
 //    private List<Barang> barang;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "penjualan")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "detailPenjualan_id",referencedColumnName = "id_detailPenjualan")
     private DetailPenjualan detailPenjualan;
+
+//    @JsonIgnore
+//    @OneToOne(mappedBy = "penjualan")
+//    private DetailPenjualan detailPenjualan;
 
 //    @OneToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "detailPenjualan_id",referencedColumnName = "id_detailPenjualan")

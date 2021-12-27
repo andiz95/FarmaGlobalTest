@@ -5,6 +5,7 @@ import com.hellospring.demo.mapper.PostPenjualan;
 import com.hellospring.demo.mapper.PutPenjualan;
 import com.hellospring.demo.model.Barang;
 import com.hellospring.demo.model.Penjualan;
+import com.hellospring.demo.model.dto.CreateDetailPenjualan;
 import com.hellospring.demo.model.dto.CreatePenjualan;
 import com.hellospring.demo.model.dto.EditPenjualan;
 import com.hellospring.demo.repository.BarangRepository;
@@ -57,11 +58,12 @@ public class PenjualanServiceImpl implements PenjualanService{
     }
 
     @Override
-    public ResponseEntity<Object> postPenjualan(@RequestBody CreatePenjualan createPenjualan)
+    public ResponseEntity<Object> postPenjualan( @RequestBody Penjualan penjualans)
     {
-        Penjualan penjualan1 = postPenjualan.penjualanPostToEntity(createPenjualan);
+//        Penjualan penjualan1 = postPenjualan.penjualanPostToEntity(createPenjualan,createDetailPenjualan);
+        List<Penjualan> penjualan = penjualanRepository.InsertData(penjualans);
 
-        return new ResponseEntity<>(penjualan1,HttpStatus.OK);
+        return new ResponseEntity<>(penjualan,HttpStatus.OK);
     }
 
     @Override

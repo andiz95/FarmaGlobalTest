@@ -2,6 +2,7 @@ package com.hellospring.demo.presenter;
 
 import com.hellospring.demo.model.Barang;
 import com.hellospring.demo.model.Penjualan;
+import com.hellospring.demo.model.dto.CreateDetailPenjualan;
 import com.hellospring.demo.model.dto.CreatePenjualan;
 import com.hellospring.demo.model.dto.EditPenjualan;
 import com.hellospring.demo.service.PenjualanServiceImpl;
@@ -35,8 +36,8 @@ public class PenjualanPresenter {
     }
 
     @PostMapping("penjualan")
-    public ResponseEntity<Object> postPenjualan(@RequestBody CreatePenjualan createPenjualan){
-        return penjualanService.postPenjualan(createPenjualan);
+    public ResponseEntity<Object> postPenjualan( @RequestBody Penjualan penjualans){
+        return penjualanService.postPenjualan(penjualans);
     }
 
     @PutMapping("penjualan/{id}")

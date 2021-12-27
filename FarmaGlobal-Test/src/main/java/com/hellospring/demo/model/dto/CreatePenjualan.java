@@ -16,5 +16,5 @@ public class CreatePenjualan {
     private int jumlah_uang_pembeli;
     private int banyak_barang;
     private int harga_barang;
-    private Long barangID;
+
 }
